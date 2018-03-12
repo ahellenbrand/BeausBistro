@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--Could use some formatting to each field (look at portfolio style sheet) to figure out best methods.-->
+<html>
+<head>
+	<title>Menu</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+	<!-- Pt 2: Apply all styles for the menu page in internal style sheets. -->
+	<style>
+	/* Pt 2: Give the menu background a color other than white. */
+	div.main {
+		background-color: #BBB2A0;
+		color: #2A2C32;
+		text-align: center;
+	}
+	
+	div.main div.row {
+		float: none;
+		margin: auto;
+		width: 90%;
+	}
+	
+	.table {
+		width: auto;
+		margin: auto;
+	}
+	
+	/* Pt 2: Color the table background white and stripe it.  I originally did this using only CSS but then I changed them to using bootstrap's
+	.table and .table-striped classes. */
+	.table-striped {
+		background-color: #d5d2cb;	
+	}
+	
+	table caption {
+		color: #2A2C32;
+		text-align: center;
+	}
+
+	td {
+		vertical-align: middle !important;
+	}
+	
+	td.drinkName {
+		text-align: left;
+	}
+	
+	td.drinkPrice {
+		text-align: right;
+	}
+	
+	span.seasonal {
+		background-color: #FFFFFF;
+		font-family: Courier, serif;
+		text-transform: uppercase;
+		font-size: small;
+		vertical-align: middle;
+		padding: 0px 2px 0px 2px;
+	}
+	
+	span.new {
+		background-color: #2A2C32;
+		color: #FFFFFF;
+		font-family: Courier, serif;
+		text-transform: uppercase;
+		font-size: small;
+		vertical-align: middle;
+		padding: 0px 2px 0px 2px;
+	}
+	</style>
+</head>
+<body>
+	<div class="header container-fluid">
+		<div class="row">
+			<!-- Logo and restaurant name -->
+			<h1><img id="logoBistro" src="Images/logoBistro.png" alt="Beau's Bistro logo of cat looking at plate" /> Beau's Bistro</h1>
+			<!-- Java script disabled notification -->
+			<noscript>
+				<p style="color: red">Your browser does not support JavaScript or it is disabled. This site is best viewed with JavaScript enabled.</p>
+			</noscript>
+		</div>
+		<div class="row">
+			<hr />
+			<!-- Tab navigation bar -->
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="menu.html">Menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contactUs.html">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Jumbotron and carousel news reel -->
+	<div class="jumbotron-fluid">
+		<hr />
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			  <li data-target="#myCarousel" data-slide-to="1"></li>
+			  <li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<!-- Slide information -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img class="imgItem" src="Images/woodBoards.jpg" alt="Wooden boards">
+					<div class="carousel-caption">
+						<h2>Open June 2018</h2>
+						<h3>Our new location at 246 Bell Street will be ready to serve you in three months!</h3>
+					</div>
+				</div>
+				<div class="item">
+					<img class="imgItem" src="Images/springFlowers.jpg" alt="Spring flowers">
+					<div class="carousel-caption">
+						<h2>Spring for a Meal</h2>
+						<h3>We're rolling out our seasonal menu with special options for Spring!</h3>
+					</div>
+				</div>
+				<div class="item">
+					<img class="imgItem" src="Images/coffeeBeans.jpg" alt="Coffee beans">
+					<div class="carousel-caption">
+						<h2>Drink of the Month: SG Special Brew</h2>
+						<h3>Stop in for a taste of our exclusive new brew courtesy of The Software Guild!</h3>
+					</div>
+				</div>
+			</div>
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<hr />
+	</div>
+	
+	<div class="main container-fluid">
+		<div class="row">
+			<!-- Pt 3: Menu page content should stack.  Used bootstrap's reactive grid system to make sure the menu content stacks in different browsers and window sizes. -->
+			<div class="col-md-4 menuLeft">
+				<h2>Breakfast Menu</h2></caption>
+					<h3>Basic Breakfast</h3>
+						<p>A well-rounded meal of eggs cooked to order, hashbrowns, and your choice of bacon, sausage, or tofu.</p>
+						<h4>$15.00</h4>
+					<h3>Slim Pickings</h3>
+						<p>Egg whites, Canadian bacon, spinach, and feta cheese served on an english muffin. <span class="glyphicon glyphicon-asterisk"><span class="glyphicon glyphicon-grain"></span></span></p>
+						<h4>$18.00</h4>
+					<h3>Texas-Style Skillet</h3>
+						<p>Tender steak strips, green chiles, onions, and bell peppers on seasoned ranch potatoes with melted Pepper Jack cheese.  Served with two eggs cooked to order. <span class="glyphicon glyphicon-fire"></span></p>
+						<h4>$20.00</h4>
+					<h3>Country Breakfast Quiche</h3>
+						<p>Grated swiss cheese, tomatoes, onions, eggs, and your choice of meat cooked within a flaky pie crust.  Includes sides of hashbrowns and toast. <span class="glyphicon glyphicon-grain"></span></p>
+						<h4>$25.00</h4>
+					<h3>Avocado Toast <span class="seasonal">Seasonal</span></h3>
+						<p>Avocado on flaky whole grain toast with lemon zest.  Served with two hard-boiled eggs and arugula. <span class="glyphicon glyphicon-asterisk"><span class="glyphicon glyphicon-grain"></p>
+						<h4>$15.00</h4>
+				<table class="table table-striped">
+					<caption><h2>Specialty Coffee</h2></caption>
+					<tr>
+						<td class="drinkName">SG Special Brew <span class="new">New</span></td>
+						<td class="drinkPrice">$7.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">White Chocolate Mocha</td>				
+						<td class="drinkPrice">$8.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Caramel Macchiato</td>
+						<td class="drinkPrice">$8.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Mountain Peak Espresso</td>
+						<td class="drinkPrice">$6.00</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-4 menuCenter">
+				<h2>Lunch Menu</h2></caption>
+					<p>**Lunch items are available all day**</p>
+					<h3>Chicken Noodle Soup</h3>
+						<p>Tender chicken in a hearty broth simmered with organic egg noodles, chopped carrots, celery, onions, and a pinch of garlic. <span class="glyphicon glyphicon-grain"></span></p>
+						<h4>$15.00</h4>
+					<h3>Classic Reuben</h3>
+						<p>Your choice of beef or turkey with creamy dressing, melted Swiss cheese, and sauerkraut between slices of marble rye bread. <span class="glyphicon glyphicon-grain"></span></p>
+						<h4>$18.00</h4>
+					<h3>Tarragon Chicken Salad <span class="seasonal">Seasonal</span></h3>
+						<p>Grilled chicken salad with crisp radishes and cucumbers.  Seasoned with tarragon pesto. <span class="glyphicon glyphicon-asterisk"></span></p>
+						<h4>$20.00</h4>
+				<h2>Dinner Menu</h2></caption>
+					<h3>Grilled Turkey Club</h3>
+						<p>Smoked turkey breast, tomato, cheddar cheese, and homemade mayonnaise between grilled slices of whole wheat bread. <span class="glyphicon glyphicon-grain"></span></p>
+						<h4>$20.00</h4>
+					<h3>Spicy Chicken Penne</h3>
+						<p>Shredded chicken, tomatoes, and aged parmesan cheese simmered in a spicy tomato basil sauce served on a bed of organic penne pasta. <span class="glyphicon glyphicon-fire"></span><span class="glyphicon glyphicon-grain"></span></p>
+						<h4>$25.00</h4>
+					<h3>Perfect Prime Rib</h3>
+						<p>Slow roasted prime rib with a seasoned crust served with au jus, choice of potatoes, and side of vegetables.</p>
+						<h4>$35.00</h4>
+					<h3>Poached Salmon with Artichoke <span class="seasonal">Seasonal</span></h3>
+						<p>Salmon fillets and artichokes poached in herb-infusion with layers of subtle flavor. <span class="glyphicon glyphicon-asterisk"></span></p>
+						<h4>$30.00</h4>
+			</div>
+			<div class="col-md-4 menuRight">
+				<table class="table table-striped">
+					<caption><h2>On Tap</h2>
+						**Happy Hour Mon-Fri from 5-7pm**</caption>
+					<tr>
+						<td class="drinkName">Palsmarter</td>
+						<td class="drinkPrice">$8.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Brewer Light</td>				
+						<td class="drinkPrice">$8.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Paul Revere Boston Lager</td>
+						<td class="drinkPrice">$11.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Red Moon German White</td>
+						<td class="drinkPrice">$15.00</td>
+					</tr>
+				</table>			
+				<table class="table table-striped">
+					<caption><h2>Wine List</h2></caption>
+					<tr>
+						<td class="drinkName">Oakey Dokey White Zinfandel '12, CA</td>
+						<td class="drinkPrice">$12.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Summer Riesling '11, WA</td>				
+						<td class="drinkPrice">$12.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Sour Grapes Pinot Blanc '14, Germany</td>
+						<td class="drinkPrice">$15.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Burgundy Pinot Noir '14, OR</td>
+						<td class="drinkPrice">$20.00</td>
+					</tr>
+					<tr>
+						<td class="drinkName">Vampire's Delight Cabernet Sauvignon '14, Napa</td>
+						<td class="drinkPrice">$25.00</td>
+					</tr>
+				</table>
+				<h2>Dessert Menu</h2></caption>
+					<h3>Chocolate Fudge Brownie</h3>
+						<p>Moist brownie with dark chocolate chunks.  Topped with whipped cream and a cherry.</p>
+						<h4>$10.00</h4></p>
+					<h3>Cinnamon Apple Cobbler</h3>
+						<p>Granny Smith apples served with a cinnamon-spiced cake batter topping and dollop of ice cream <span class="glyphicon glyphicon-grain"></span></p>
+						<h4>$15.00</h4>
+					<h3>Strawberry-Basil Shortcakes <span class="seasonal">SEASONAL</span></h3>
+						<p>Fresh strawberries and cream between shortcakes straight from the oven.</p>
+						<h4>$12.00</h4>
+			</div>
+			<div class="col-md-12">
+				<p>
+					<span class="glyphicon glyphicon-fire"></span> = Meal is spicy. | 
+					<span class="glyphicon glyphicon-asterisk"></span> = Meal is low fat. | 
+					<span class="glyphicon glyphicon-grain"></span> = Meal contains gluten but gluten free options available.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer container-fluid">
+		<div class="row">
+			<hr />
+			<h4 id="addressPhone">123 Cherry St, Seattle, WA  98104</br>
+				206.555.2328</h4>
+		</div>
+	</div>
+	
+</body>
+</html>

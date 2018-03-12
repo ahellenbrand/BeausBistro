@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Antic+Slab);
+
+body {
+	background-color: #2A2C32;
+	font-family: Courier, serif;
+}
+
+/*Pt 2: Style the restaurant name with a hosted or embedded font.  I used Google's Antic Slab for most heading fonts throughout.*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Antic Slab', Courier, serif;
+}
+
+hr {
+	margin: 0px;
+	border-style: dashed;
+	border-color: #FFFFFF;
+}
+
+/*Pt 2: Store header styles in an external css file.*/
+.header {
+	color: #D0CDC2;
+	font-family: Courier, serif;
+	text-align: center;
+}
+
+#logoBistro {
+	width: 50px;
+	margin-top: -5px;	
+	vertical-align: middle;
+}
+
+/* Nav bar formatting */
+.nav {
+	border-style: none;
+	text-align: center;
+	float: none;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+/* Pt 2: Had a few link requirements so I just left them in here. */
+a {
+    color: #EBE8DF;
+}
+
+a:link {
+	color: #EBE8DF;
+}
+
+a:visited {
+	color: #A2988A;
+}
+
+a:hover {
+	color: #2A2C32;
+	font-weight: bolder;
+}
+
+a:active {
+	color: #2A2C32;
+	text-decoration: none;
+}
+
+/* Setting the heights of the carousel slides */
+.item {
+	max-height: 250px;
+}
+
+.imgItem {
+	min-height: 200px;	
+}
+
+/*Setting the dark background filter of each carousel slide */
+.item:after {
+	content:"";
+	display:block;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background: rgba(0,0,0,0.5);
+}
+
+/* Responsive CSS for carousel */
+@media (max-width: 992px) {
+	.item {
+		height: 250px;
+	}
+}
+
+@media (max-width: 768px) {
+	.item {
+		height: 200px;
+	}
+
+}
+
+@media (max-width: 544px) {
+	.carousel-caption h2, .carousel-caption h3 {
+		font-size: 130%;
+	}
+}
+
+div.footer {
+	color: #D0CDC2;
+	font-family: Courier, serif;
+	text-align: center;
+}
+	

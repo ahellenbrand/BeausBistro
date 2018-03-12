@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<!-- Pt 3: Add Bootstrap and add a carousel. Bootstrap website's tutorial for the carousel said the below 5 lines needed to be entered -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Pt 2: Store header and footer styles in external CSS file -->
+	<link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+	<style>
+	/* Pt 2: Set the homepage's background to a color other than white. */
+	div.main {
+		background-color: #BBB2A0;
+		color: #2A2C32;
+		padding: 15px;
+		text-align: center;
+	}
+	
+	div.aboutMain {
+		float: none;
+		margin: auto;
+		
+	}
+	
+	#mainImage {
+		border: 2px solid #2A2C32;
+	}
+	</style>
+</head>
+<body>
+	<div class="header container-fluid">
+		<div class="row">
+			<!-- Pt 1: You must create a name for the restaurant. Logo and restaurant name here -->
+			<h1><img id="logoBistro" src="Images/logoBistro.png" alt="Beau's Bistro logo of cat looking at plate" /> Beau's Bistro</h1>
+			<!-- Pt 3: Make sure users who have JavaScript disabled know site is best viewed with it enabled.  Notification here. -->
+			<noscript>
+				<p style="color: red">Your browser does not support JavaScript or it is disabled. This site is best viewed with JavaScript enabled.</p>
+			</noscript>
+		</div>
+		<div class="row">
+			<hr />
+			<!-- Pt 3: Include navigation tabs and home link icon. Tab navigation bar here with home glyphicon. -->
+			<ul class="nav nav-tabs">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="menu.html">Menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contactUs.html">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Pt 3: Required jumbotron and carousel for page news so I just used the jumbotron as a container for the carousel. -->
+	<div class="jumbotron-fluid">
+		<hr />
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			  <li data-target="#myCarousel" data-slide-to="1"></li>
+			  <li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<!-- Slide information -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img class="imgItem" src="Images/woodBoards.jpg" alt="Wooden boards">
+					<div class="carousel-caption">
+						<h2>Open June 2018</h2>
+						<h3>Our new location at 246 Bell Street will be ready to serve you in three months!</h3>
+					</div>
+				</div>
+				<div class="item">
+					<img class="imgItem" src="Images/springFlowers.jpg" alt="Spring flowers">
+					<div class="carousel-caption">
+						<h2>Spring for a Meal</h2>
+						<h3>We're rolling out our seasonal menu with special options for Spring!</h3>
+					</div>
+				</div>
+				<div class="item">
+					<img class="imgItem" src="Images/coffeeBeans.jpg" alt="Coffee beans">
+					<div class="carousel-caption">
+						<h2>Drink of the Month: SG Special Brew</h2>
+						<h3>Stop in for a taste of our exclusive new brew courtesy of The Software Guild!</h3>
+					</div>
+				</div>
+			</div>
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<hr />
+	</div>
+	
+	<div class="main container-fluid">
+		<div class="row">
+			<!-- Pt 3: Front page content should stack.  Used bootstrap's reactive grid system to make sure the front page content stacks in different browsers and window sizes. -->
+			<div class="col-md-5 aboutMain">
+				<!-- Pt 1: Include an image on the restaurant home page.
+				Pt 2:  Apply all positioning CSS styles for the image as an inline style.  I could have used Bootstrap's img-responsive class, but that doesn't automatically center the image.
+				I would have to then add margin: auto; to the internal style sheet.  If inline style positioning wasn't a requirement, I would have put this on the internal style sheet. -->
+				<img id="mainImage" style="width: 90%;" src="Images/insideBright.jpg" alt="Inside Boris' Bistro. A well lit space with tables, chairs, and friendly people." />
+				<h2 class="aboutUs">About Us</h2>
+				<!-- Pt 1: Supply a description of the restaurant. -->
+				<p class="aboutUs">
+					As a young girl, Annie spent many afternoons at her grandmother's house after school.  Her Nana, as she called her, had a finicky, white cat named Beau.  When they 
+					would sit down to eat dinner, they would frequently find Beau waiting for a plate.  Her grandfather would often joke, "What do you think this is? Beau's Bistro?" 
+					and Annie's restaurant's name was born.<br/>
+					<br/>
+					After being in business for over 15 years, Annie continues to enjoy providing all guests with delicious meals.  Whether they are on their way to work or about to begin 
+					a night out on the town, Beau's Bistro offers a multitude of options hoping that everyone can find comfort in the food they enjoy here.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer container-fluid">
+		<div class="row">
+		<hr />
+			<!-- Pt 1: Supply a fictional address and phone number for the restaurant.
+			While trying to figure out a way to make the page more responsive and searchable, I read about HTML5 semantic tags.  In the future I will use an <address> tag for
+			contact information.  We did not go over semantic tags in the course so I left these alone.-->
+			<h4 id="addressPhone">123 Cherry St, Seattle, WA  98104</br>
+				206.555.2328</h4>
+		</div>
+	</div>
+	
+</body>
+</html>
